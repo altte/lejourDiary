@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'IBMPlexSansKR-ExtraLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-ExtraLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'EliceDigitalBaeum_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EliceDigitalBaeum_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/**
+*  * default style
+**/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body, h3, p {
+    font-family: 'EliceDigitalBaeum_Bold';
+}
+
+/**
+*  *  Navigation Bar Style 네비게이션 바
+**/
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #0D0D0D;
+    color: #F2F2F2;
+    padding: 25px 60px;
+    margin-bottom: 30px;
+}
+
+.emoji {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+
+.emojiBox {
+    font-size: 30px;
+    position: relative;
+}
+
+div[class|="amount"] {
+    background-color: #F21B2D;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #F1FAEE;
+    border-radius: 4px;
+    text-align: center;
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    padding: 3px;
+}
+
+/**
+*  *  Card Style 카드
+**/
+
+.cardBox {
+    display: grid;
+    grid-template-columns: repeat(4, 222px);
+    gap: 30px;
+    justify-content: center;
+}
+
+@media (max-width: 1000px) {
+    .cardBox{
+        grid-template-columns: repeat(3, 222px);
+    }
+}
+
+@media (max-width: 764px) {
+    .cardBox{
+        grid-template-columns: repeat(2, 222px);
+    }
+}
+
+@media (max-width: 510px) {
+    .cardBox{
+        grid-template-columns: repeat(1, 222px);
+    }
+}
+
+.card {
+    border: 1px solid #0D0D0D;
+    border-radius: 4px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+}
+
+.desc {
+    max-height: max-content;
+}
+
+.withWhom-emoji {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+}
+
+.emojiList {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+    padding-right: 5px;
+    font-size: 20px;
+}
